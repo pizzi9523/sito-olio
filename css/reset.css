@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --black: #302921;
+    --green: #9e9b14;
+    --white: #ededed;
+}
+
+html {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.c_green {
+    color: var(--green);
+}
+
+.c_black {
+    color: var(--black);
+}
+
+.c_white {
+    color: var(--white);
+}
