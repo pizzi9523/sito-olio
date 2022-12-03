@@ -7,9 +7,9 @@
 .my_nav{
     background-color: rgba(48, 41, 33, 0.8);
     position: relative;
-    z-index: 100000;
+    z-index: 1;
 }
-.my_nav ul {
+.my_nav .menu {
     position: relative;
     z-index: 100000;
 }
@@ -23,6 +23,12 @@
     background: rgba(0, 0, 0, 0.5);
     pointer-events: none;
     height: 100%;
+}
+
+.hamburger-menu button{
+    display: none;
+    background: none;
+    border: none;
 }
 
 main{
@@ -82,16 +88,16 @@ section{
 }
 
 #second_section::after{
-            content: "";
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: var(--white);
-            filter: opacity(0.8);
-            pointer-events: none;
-            height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    filter: opacity(0.8);
+    pointer-events: none;
+    height: 100%;
 }
 
 .logo_2{
@@ -116,7 +122,6 @@ section{
     position: relative;
     display: flex;
     align-items: center;
-    /* filter: grayscale(1); */
 
 }
 
@@ -131,4 +136,28 @@ section{
     filter: opacity(0.5);
     pointer-events: none;
     height: 100%;
+}
+ 
+@media screen and (max-width: 900px) {
+
+    .my_nav .menu-link {
+       display: none; 
+    }
+
+    .my_nav .hamburger-menu button{
+        display: block;
+    }
+
+    .hero_text h1{
+        font-size: 35px;
+    }
+
+    .hero_text{
+        text-align: center;
+        width: 95%;
+    }    
+
+    .hero_text .oltre {
+        font-size: 75px;
+    }
 }
