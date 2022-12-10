@@ -1,6 +1,9 @@
 const hamburgerButtonOpen = document.querySelector(".hamburger-menu-button-open");
 const hamburgerButtonClose = document.querySelector(".hamburger-menu-button-close");
 const orderButton = document.querySelector(".order_button");
+const navLink = document.querySelectorAll(".menu-mobile-link a");
+
+console.log(navLink);
 
 const menuMobile = document.querySelector(".menu-mobile");
 
@@ -10,6 +13,9 @@ orderButton.addEventListener('mousedown', clickButton);
 orderButton.addEventListener('mouseup', leaveButton);
 
 
+navLink.forEach(element => {
+    element.addEventListener('click', hideMenu)
+})
 
 
 function showMenu() {
