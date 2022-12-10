@@ -51,7 +51,11 @@ main {
     top: -100px;
 }
 
-section {
+/* section {
+    min-height: 100vh;
+} */
+
+.hero {
     min-height: 100vh;
 }
 
@@ -222,6 +226,7 @@ section {
     background-image: url("/img/bg_dark.PNG");
     background-size: cover;
     height: 100%;
+    pointer-events: none;
     /* mix-blend-mode: multiply; */
     filter: opacity(0.13);
     z-index: 0;
@@ -229,6 +234,7 @@ section {
 
 
 .order_button {
+    transition: transform 1.5s, color 1s, border 1s, filter 1s;
     padding: 5px 40px;
     margin: 10px 0;
     background-color: var(--green);
@@ -242,8 +248,61 @@ section {
 }
 
 .order_button:hover {
-    /* background-color: var(--white); */
+    transform: scale(1.2);
+    color: var(--white);
+    border: 2px solid var(--white);
+    filter: drop-shadow(2px 4px 6px var(--white));
 }
+
+.rating {
+    color: gold;
+}
+
+.button-special {
+    position: relative;
+    padding: 5px 60px;
+    background-color: var(--green);
+    font-weight: bold;
+    font-size: 21px;
+    text-transform: uppercase;
+}
+
+.button-special::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("/img/bg_dark.PNG");
+    background-size: 400px;
+    pointer-events: none;
+    height: 100%;
+    filter: opacity(0.13);
+    z-index: 0;
+}
+
+.contact_title {
+    font-size: 70px;
+    font-weight: 300;
+    padding: 35px 0;
+}
+
+.contact_descr {
+    font-size: 25px;
+    font-weight: 100;
+}
+
+.form_contact input,
+.form_contact textarea {
+    border: 2px solid black;
+}
+
+
+
+/* .order_button:hover {
+    background-color: var(--white);
+} */
 
 @media screen and (max-width: 900px) {
 
